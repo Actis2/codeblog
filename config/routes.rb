@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :articles #adds the REST components for a blog
+  resources :articles do#adds the REST components for a blog
+    resources :comments
+  end
   root 'welcome#index'
 
   # Example of regular route:
