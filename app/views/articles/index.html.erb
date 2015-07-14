@@ -1,15 +1,21 @@
-<h1>Listing articles</h1>
-<%= link_to 'Blog', controller: 'articles' %>
-<%= link_to 'New article', new_article_path %> <!--creates hyperlink and where to go, path: articles -->
 
+<ul id ="menu_bar">
 
-<table>
+	<li><%= link_to 'Blog', controller: 'articles' %></li>
+	<li><%= link_to 'New article', new_article_path %> </li> <!--creates hyperlink and where to go, path: articles -->
+	<li><%= link_to 'Sign up', new_user_path %></li>
+
+</ul>
+
+<table id ="blog_table">
+	<th id="blog_header">Listing articles</th>
+	<th id="blog_preview">Article preview</th>
 	<tr>
 		<th>Title</th>
 		<th>Text</th>
 		<th colspan="3"></th>
 	</tr>
-
+	
 	<% @articles.each do |article| %>
 		<tr>
 			<td><%= article.title %></td>

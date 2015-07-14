@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'user_sessions/new'
+
+  get 'user_sessions/create'
+
+  resources :users
+  resources :user_sessions, only: [:new, :create]
+
+
   get 'welcome/index'
 
 
@@ -7,7 +15,11 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   resources :articles do#adds the REST components for a blog
-    resources :comments
+    resources :comments do
+      member do
+        patch :complete
+      end
+    end
   end
   root 'welcome#index'
 

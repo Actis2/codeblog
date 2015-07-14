@@ -1,2 +1,9 @@
 <h1>Coding and Tech!</h1>
 <p>A blog about learning how to code and my own experiences/thoughts on new tech</p>
+<ul id ="menu_bar">
+
+	<li><%= link_to 'Blog', controller: 'articles' %></li>
+	<li><%= link_to 'New article', new_article_path %> </li> <!--creates hyperlink and where to go, path: articles -->
+	<li><%= link_to 'Sign up', new_user_path %></li>
+
+</ul>

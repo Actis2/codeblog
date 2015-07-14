@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+#menu_bar {
+	float:left;
+	display: inline-block;
+
+}
+
+ul {
+	list-style-type: none;
+}
+
+#blog_table {
+	float:center;
+	clear:both;
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 5%;
+	background: #BDBDBD;
+	border-radius: 5%;
+	font: 'Open Sans', sans-serif;
+	width:80%;
+	border-bottom: 2px solid #FF8000;
+
+
+}
+
+#blog_header {
+	font-size: 1.3em;
+	text-align: center;
+
+
+
+}
+
+#field {
+	border: 10%;
+}
+
+#blog_preview {
+	font-size: 1.3em;
+	text-align:center;
+
+}
